@@ -1,0 +1,51 @@
+# device
+gpu_id: [0]
+# exp
+exp_path: ./exp_outputs/UCF50_SFAoatt
+exp_name: UCF50_SFAoatt
+# dataset
+data_mode: UCF50
+if_dedata: False
+# net
+net: SFAoatt_gate_alone
+# resume
+if_resume: False
+#resume_path: ./exp_outputs/UCF50_SFAoatt/10-25_14-28_UCF50_SFAoatt/latest_state.pth
+# pretrain
+if_pretrain: True
+pretrained_path: /media/wmy/ee25778f-7952-4c55-9d90-e4337ff23c7d/wmy/project/crowd-code/exp_outputs/UCF50_SFAoatt/09-08_19-17_UCF50_SFAoatt/all_ep_1531_mae_281.8_mse_421.6.pth
+# reporduction
+seed: 3035  # random seed for reporduction
+# learning rate
+lr: 0.0001  # learning rate
+lr_decay: 1  # decay rate  1
+lr_decay_start: -1
+num_epoch_lr_decay: 0.95
+# train and val
+val_batchsize: 1 # must be
+train_batchsize: 8
+MAX_EPOCH: 10000
+if_print: False
+if_vis_results: False
+vis_train_result: False
+PRINT_FREQ: 1 # 30
+VAL_FREQ: 1 # 10 # each epoch
+VAL_DENSE_START: 1
+# optimizer
+optimizer: Adam #Adam
+SGD:
+  momentum: 0.995
+# loss
+vector_loss: False
+use_my_loss: wmyloss_cos # False
+
+
+
+
+
+
+
+
+
+
+

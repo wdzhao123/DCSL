@@ -1,0 +1,54 @@
+# device
+gpu_id: [0]
+# exp
+exp_path: /media/wmy/ee25778f-7952-4c55-9d90-e4337ff23c7d/wmy/project/crowd-code/exp_outputs/exp_outputs_shanghaiB #./exp_outputs/SHB_SFAoatt
+exp_name: SHB_SFAoatt
+# dataset
+data_mode: SHB
+if_dedata: False
+# net
+net: SFAoatt_gate_alone #SFAoatt
+# resume
+if_resume: False
+#resume_path: ./exp_outputs/SHB_SFAoatt/10-29_SHB_SFAoatt/latest_state.pth
+# pretrain
+if_pretrain: True   #  True False
+pretrained_path: /media/wmy/ee25778f-7952-4c55-9d90-e4337ff23c7d/wmy/project/crowd-code/exp_outputs/exp_outputs_shanghaiB/all_ep_12_mae_7.9_mse_14.5.pth
+#./exp_outputs/SHB_SFAoatt/all_ep_181_mae_7.3_mse_11.3.pth
+
+# reporduction
+seed: 3035  # random seed for reporduction
+# learning rate
+lr: 0.0001  # learning rate
+lr_decay: 1  # decay rate  1
+lr_decay_start: -1
+num_epoch_lr_decay: 0.95
+# train and val
+val_batchsize: 1 # must be
+train_batchsize: 8
+MAX_EPOCH: 1000
+if_print: False
+if_vis_results: False
+vis_train_result: False
+PRINT_FREQ: 1 # 30
+VAL_FREQ: 1 # 10 # each epoch
+VAL_DENSE_START: 1
+# optimizer
+optimizer: Adam #Adam
+SGD:
+  momentum: 0.995
+# loss
+vector_loss: False
+use_my_loss: wmyloss_cos # False None
+#use_my_loss: None # False None
+
+
+
+
+
+
+
+
+
+
+
