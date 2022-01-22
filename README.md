@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # DCSL
 Generalizable Crowd Counting via Diverse Context Style Learning
 
